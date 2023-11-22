@@ -1,0 +1,191 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #00bcd4;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+section {
+    max-width: 60%;
+    max-height: 50%;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #fff;
+}
+
+h1, h2 {
+    color: #00bcd4;
+}
+
+p {
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Estilos para a seção de introdução */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.intro-image {
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.intro-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+button {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(170, 100%, 42%);
+}
+
+/* Estilos para seções adicionais */
+.category {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.round-image {
+    border-radius: 50%;
+    max-width: 150px;
+    height: auto;
+    margin-top: 1em;
+}
+
+.round-image:hover { 
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Estilos para mostrar as seções adicionais quando o usuário rola para baixo */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.category.in-view {
+    animation: fadeIn 0.8s forwards;
+}
+
+@media only screen and (max-width: 600px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 0.5em;
+    }        
+
+    .intro-text {
+        max-width: 100%;
+    }
+
+    /* Estilos para mostrar as seções adicionais quando o usuário rola para baixo */
+    .category {
+        max-width: 100%;
+        margin: 1em 0; /* Adiciona um espaçamento entre as categorias */
+    }
+}
+
+/* Estilos para o pop-up*/
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    max-width: 50%;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Adicione estilos para o formulário */
+#form-popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adicione estilos para os campos do formulário */
+form {
+    width: 100%;
+    max-width: 400px; /* Ajuste conforme necessário */
+    margin: 0 auto;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #00bcd4;
+    margin-bottom: 1em;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Empresa EAD</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<header>
+</header>
+
+<body>
+    <script src="script.js"></script>
+    <section class="intro">
+        <img src="./images/salviahubicon.png" alt="Imagem de introdução" class="intro-image">
+        <div class="intro-text">
+            <h2>Educação, Arte e Desenvolvimento</h2>
+            <p>Nossa missão é transformar sua vida através do livre contato com a arte, as línguas, a saúde e a mente. Acreditamos que o aprendizado contínuo e humanizado é resultado entre a relação de admiração mútua e amizade entre educadores e educandos.
+                <br>
+                Venha conhecer nossos planos e agendar sua aula experimental <b> gratuita </b>.
+            </p>
+            
+            <button onclick="exibirFormPopup('Formulário')">Comece Agora</button>
+        </div>
+
+        <!-- Categorias em uma única linha -->
+        <div class="category" id="ingles" onclick="exibirPopup('Língua Inglesa')">
+            <h3>Língua Inglesa</h3>
+            <img src="./images/languageicon.png" alt="Imagem Língua Inglesa" class="round-image">
+        </div>
+
+        <div class="category" id="psicopedagogia" onclick="exibirPopup('Psicopedagogia')">
+            <h3>Psicopedagogia</h3>
+            <img src="./images/psicopedagogyicon.png" alt="Imagem Psicopedagogia" class="round-image">
+        </div>
+
+        <div class="category" id="musica" onclick="exibirPopup('Música')">
+            <h3>Música</h3>
+            <img src="./images/musicicon.png" alt="Imagem Música" class="round-image">
+        </div>
+
+        <div class="category" id="clube-do-livro" onclick="exibirPopup('Clube do Livro')">
+            <h3>Clube do Livro</h3>
+            <img src="./images/bookclubicon.png" alt="Imagem Clube do Livro" class="round-image">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Sálvia Hub Educacional. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Container para o pop-up -->
+<div class="popup-container" id="popup-container">
+    <div class="popup-content" id="popup-content">
+        <!-- Conteúdo do pop-up -->
+        <h3>Língua Inglesa</h3>
+        <p>Algumas informações interessantes sobre esta categoria.</p>
+        <button onclick="fecharPopup()">Fechar</button>
+    </div>
+</div>
+
+   <!-- Container para o pop-up do formulário -->
+<div class="popup-container" id="form-popup-container">
+    <div class="popup-content" id="form-popup-content">
+        <!-- Conteúdo do pop-up do formulário -->
+        <h3>Preencha o Formulário</h3>
+        <form>
+            <!-- Adicione os campos do formulário conforme necessário -->
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required>
+
+            <label for="curso">Curso de Interesse:</label>
+            <input type="text" id="curso" name="curso" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <label for="confirmar-senha">Confirmar Senha:</label>
+            <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+
+            <!-- Adicione mais campos conforme necessário -->
+
+            <button type="submit">Enviar</button>
+        </form>
+        <button onclick="fecharFormPopup()">Fechar</button>
+    </div>
+</div>
+
+</body>
+
+</html>
